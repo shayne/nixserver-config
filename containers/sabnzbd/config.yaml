@@ -1,0 +1,11 @@
+appdata:
+  # TODO: persist at /pool/container-data/
+  - /var/lib/sabnzbd
+  - /var/lib/tailscale
+mounts:
+  - /pool/downloads:/downloads
+devices:
+  - /dev/net/tun:/dev/net/tun
+cap_add:
+  - net_admin
+  - sys_module

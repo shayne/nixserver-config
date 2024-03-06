@@ -1,0 +1,11 @@
+appdata:
+  - /config
+  - /var/lib/tailscale
+mounts:
+  - /pool/downloads:/downloads
+  - /pools/media/tv:/tv
+devices:
+  - /dev/net/tun:/dev/net/tun
+cap_add:
+  - net_admin
+  - sys_module
