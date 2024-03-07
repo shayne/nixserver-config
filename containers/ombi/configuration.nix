@@ -11,7 +11,7 @@ in
   services.cloudflared.enable = true;
   services.cloudflared.tunnels = {
     "${tunnelId}" = {
-      credentialsFile = "${toString (pkgs.writeSecret "ombi_credentialsFile")}";
+      credentialsFile = "${toString (pkgs.writeSecret "ombi_credentials_file")}";
       default = "http_status:404";
       ingress = {
         "${hostname}" = {
