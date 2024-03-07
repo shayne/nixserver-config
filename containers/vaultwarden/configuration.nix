@@ -32,4 +32,6 @@ in
       };
     };
   };
+
+  services.tailscale.enable = true;
 }

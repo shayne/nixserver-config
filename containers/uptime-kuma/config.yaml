@@ -1,8 +1,6 @@
 appdata:
-  - /var/lib/plex
+  - /var/lib/uptime-kuma
   - /var/lib/tailscale
-mounts:
-  - /pool/media:/media
 devices:
   - /dev/net/tun:/dev/net/tun
 cap_add:
