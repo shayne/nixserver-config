@@ -32,13 +32,30 @@
         "type": "github"
       }
     },
+    "nixpkgs_2": {
+      "locked": {
+        "lastModified": 1709569716,
+        "narHash": "sha256-iOR44RU4jQ+YPGrn+uQeYAp7Xo7Z/+gT+wXJoGxxLTY=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "617579a787259b9a6419492eaac670a5f7663917",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixos-23.11",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
     "nixserver": {
       "inputs": {
-        "nixos-unstable": "nixos-unstable"
+        "nixos-unstable": "nixos-unstable",
+        "nixpkgs": "nixpkgs_2"
       },
       "locked": {
-        "lastModified": 1709678271,
-        "narHash": "sha256-XIetL8+nDs1JMxlI9cEGW695BrGafVzjmkvdxdhbu1M=",
+        "lastModified": 1709846984,
+        "narHash": "sha256-8BtMbCgbXJkqUtC903D5FDDbOPJ/WV9VFSdLdFMFVSI=",
         "type": "tarball",
         "url": "https://releases.nixserver.io/latest/nixosModules"
       },
@@ -50,7 +67,20 @@
     "root": {
       "inputs": {
         "nixpkgs": "nixpkgs",
-        "nixserver": "nixserver"
+        "nixserver": "nixserver",
+        "secrets": "secrets"
+      }
+    },
+    "secrets": {
+      "locked": {
+        "lastModified": 1709846928,
+        "narHash": "sha256-RcMz7o+WFkvfJeG+YJ5IWpfPjpExkIPHC3W4G853tKg=",
+        "path": "/home/shayne/nixserver-config/secrets",
+        "type": "path"
+      },
+      "original": {
+        "path": "/home/shayne/nixserver-config/secrets",
+        "type": "path"
       }
     }
   },

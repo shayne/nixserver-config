@@ -9,3 +9,4 @@ devices:
 cap_add:
   - net_admin
   - sys_module
+
