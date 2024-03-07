@@ -73,8 +73,8 @@
     },
     "secrets": {
       "locked": {
-        "lastModified": 1709846928,
-        "narHash": "sha256-RcMz7o+WFkvfJeG+YJ5IWpfPjpExkIPHC3W4G853tKg=",
+        "lastModified": 1709848708,
+        "narHash": "sha256-8ppFH3hlVzF662bnZqvzkXGKCp6VNxfWpnHzqPSKIoc=",
         "path": "/home/shayne/nixserver-config/secrets",
         "type": "path"
       },
