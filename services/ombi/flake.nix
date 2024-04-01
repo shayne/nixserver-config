@@ -14,7 +14,7 @@
       ];
       specialArgs = {
         inherit nixserver secrets;
-        containerPath = ./.;
+        servicePath = ./.;
       };
     };
   };
