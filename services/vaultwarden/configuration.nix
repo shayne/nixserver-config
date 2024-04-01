@@ -11,6 +11,7 @@ in
       SIGNUPS_ALLOWED = false;
       ROCKET_PORT = 8000;
     };
+    backupDir = "/home/shayne/backups/vaultwarden";
   };
 
   systemd.services."vaultwarden" = {
