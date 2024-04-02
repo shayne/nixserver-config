@@ -11,10 +11,17 @@ in
       SIGNUPS_ALLOWED = false;
       ROCKET_PORT = 8000;
     };
-    backupDir = "/home/shayne/backups/vaultwarden";
+    backupDir = "/backup";
   };
 
   systemd.services."vaultwarden" = {
+    serviceConfig = {
+      User = lib.mkForce "nixserver-service";
+      Group = lib.mkForce "nixserver-service";
+    };
+  };
+
+  systemd.services."backup-vaultwarden" = {
     serviceConfig = {
       User = lib.mkForce "nixserver-service";
       Group = lib.mkForce "nixserver-service";

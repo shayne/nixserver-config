@@ -1,6 +1,8 @@
 appdata:
   - /var/lib/duplicati
   - /var/lib/tailscale
+mounts:
+  - /home/shayne/backups:/backups
 devices:
   - /dev/net/tun:/dev/net/tun
 cap_add:

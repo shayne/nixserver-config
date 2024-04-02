@@ -54,8 +54,8 @@
         "nixpkgs": "nixpkgs_2"
       },
       "locked": {
-        "lastModified": 1709846984,
-        "narHash": "sha256-8BtMbCgbXJkqUtC903D5FDDbOPJ/WV9VFSdLdFMFVSI=",
+        "lastModified": 1711996513,
+        "narHash": "sha256-6ugn5Fx/MMD5bFUQ+7UCmSIixauZXFlD1EDzV3+PTnc=",
         "type": "tarball",
         "url": "https://releases.nixserver.io/latest/nixosModules"
       },
