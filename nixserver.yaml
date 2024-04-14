@@ -1,1 +1,2 @@
-appdata_root: /pool/container-data
+nixsrv:
+  appdata_root: /pool/container-data
