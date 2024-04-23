@@ -1,3 +1,4 @@
+host: nixsrv
 appdata:
   - /config
   - /var/lib/tailscale

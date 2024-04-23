@@ -1,3 +1,4 @@
+host: rk1
 appdata:
   - /var/lib/duplicati
   - /var/lib/tailscale

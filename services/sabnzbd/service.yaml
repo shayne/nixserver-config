@@ -1,3 +1,4 @@
+host: nixsrv
 appdata:
   # TODO: persist at /pool/container-data/
   - /var/lib/sabnzbd

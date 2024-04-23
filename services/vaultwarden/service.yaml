@@ -1,3 +1,4 @@
+host: rk1
 appdata:
   - /var/lib/bitwarden_rs
   - /var/lib/tailscale

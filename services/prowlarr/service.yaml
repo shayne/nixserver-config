@@ -1,3 +1,4 @@
+host: rk1
 appdata:
   - /var/lib/prowlarr
   - /var/lib/tailscale
