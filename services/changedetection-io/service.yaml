@@ -1,0 +1,5 @@
+host: nixsrv
+appdata:
+  - /var/lib/changedetection-io
+ports:
+  - 5000:5000
