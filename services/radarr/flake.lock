@@ -1,0 +1,89 @@
+{
+  "nodes": {
+    "nixos-unstable": {
+      "locked": {
+        "lastModified": 1709479366,
+        "narHash": "sha256-n6F0n8UV6lnTZbYPl1A9q1BS0p4hduAv1mGAP17CVd0=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "b8697e57f10292a6165a20f03d2f42920dfaf973",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1714272655,
+        "narHash": "sha256-3/ghIWCve93ngkx5eNPdHIKJP/pMzSr5Wc4rNKE1wOc=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "12430e43bd9b81a6b4e79e64f87c624ade701eaf",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixos-23.11",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs_2": {
+      "locked": {
+        "lastModified": 1709569716,
+        "narHash": "sha256-iOR44RU4jQ+YPGrn+uQeYAp7Xo7Z/+gT+wXJoGxxLTY=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "617579a787259b9a6419492eaac670a5f7663917",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixos-23.11",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixserver": {
+      "inputs": {
+        "nixos-unstable": "nixos-unstable",
+        "nixpkgs": "nixpkgs_2"
+      },
+      "locked": {
+        "lastModified": 1714436770,
+        "narHash": "sha256-e1b2Wr8nEAG/0yLdHSnBKJKgZ+MqTA1Jv+S9GXE/IvI=",
+        "type": "tarball",
+        "url": "https://releases.nixserver.io/latest/nixosModules"
+      },
+      "original": {
+        "type": "tarball",
+        "url": "https://releases.nixserver.io/latest/nixosModules"
+      }
+    },
+    "root": {
+      "inputs": {
+        "nixpkgs": "nixpkgs",
+        "nixserver": "nixserver",
+        "secrets": "secrets"
+      }
+    },
+    "secrets": {
+      "locked": {
+        "lastModified": 1714255606,
+        "narHash": "sha256-1ltwqHBegH8BU4R9PqRJHGD277/S/SBd3jiQzmmV54M=",
+        "path": "/home/shayne/nixserver-config/secrets",
+        "type": "path"
+      },
+      "original": {
+        "path": "/home/shayne/nixserver-config/secrets",
+        "type": "path"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}
