@@ -36,6 +36,7 @@
   
   # Any additional customization not already included.
   services.smokeping.extraConfig = ''
+    *** General ***
     syslogpriority = debug
   '';
   
