@@ -9,7 +9,7 @@
   # '';
   
   # URL to the smokeping cgi.
-  # services.smokeping.cgiUrl = "http://${hostName}:${toString port}/smokeping.cgi";
+  services.smokeping.cgiUrl = "https://smokeping.shayne.ts.net/smokeping.fcgi";
   
   # Full smokeping config supplied by the user. Overrides
   # and replaces any other configuration supplied.
