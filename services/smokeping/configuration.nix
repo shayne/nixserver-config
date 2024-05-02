@@ -55,7 +55,7 @@
   # services.smokeping.imgUrl = "cache";
   
   # DNS name for the urls generated in the cgi.
-  # services.smokeping.linkStyle = "relative";
+  services.smokeping.linkStyle = "absolute";
   
   # Use this SMTP server to send alerts
   # services.smokeping.mailHost = "";
