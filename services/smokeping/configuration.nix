@@ -1,4 +1,4 @@
-{
+{ lib, ... }: {
   # Enable the smokeping service
   services.smokeping.enable = true;
 
