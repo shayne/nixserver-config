@@ -9,7 +9,7 @@
   # '';
   
   # URL to the smokeping cgi.
-  services.smokeping.cgiUrl = "https://smokeping.shayne.ts.net/smokeping.fcgi";
+  # services.smokeping.cgiUrl = "https://smokeping.shayne.ts.net/smokeping.fcgi";
   
   # Full smokeping config supplied by the user. Overrides
   # and replaces any other configuration supplied.
@@ -35,20 +35,20 @@
   '';
   
   # Any additional customization not already included.
-  services.smokeping.extraConfig = ''
-    *** General ***
-    syslogpriority = debug
-  '';
+  # services.smokeping.extraConfig = ''
+  #   *** General ***
+  #   syslogpriority = debug
+  # '';
   
   # Host/IP to bind to for the web server.
   #
   # Setting it to `null` skips passing the -h option to thttpd,
   # which makes it bind to all interfaces.
   #
-  services.smokeping.host = null;
+  # services.smokeping.host = null;
   
   # DNS name for the urls generated in the cgi.
-  services.smokeping.hostName = "smokeping.shayne.ts.net";
+  services.smokeping.hostName = "localhost";
   
   # Base url for images generated in the cgi.
   #
@@ -58,7 +58,7 @@
   # services.smokeping.imgUrl = "cache";
   
   # DNS name for the urls generated in the cgi.
-  services.smokeping.linkStyle = "absolute";
+  # services.smokeping.linkStyle = "absolute";
   
   # Use this SMTP server to send alerts
   # services.smokeping.mailHost = "";
