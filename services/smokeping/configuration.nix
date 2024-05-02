@@ -45,7 +45,7 @@
   # Setting it to `null` skips passing the -h option to thttpd,
   # which makes it bind to all interfaces.
   #
-  # services.smokeping.host = null;
+  services.smokeping.host = null;
   
   # DNS name for the urls generated in the cgi.
   services.smokeping.hostName = "localhost";
