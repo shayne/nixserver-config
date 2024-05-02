@@ -1,0 +1,5 @@
+host: nixsrv
+appdata:
+  - /var/lib/smokeping
+ports:
+  - 8081:8081
