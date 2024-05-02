@@ -159,4 +159,6 @@
   
   # User that runs smokeping and (optionally) thttpd. A group of the same name will be created as well.
   services.smokeping.user = "nixserver-service";
+
+  services.tailscale.enable = true;
 }
