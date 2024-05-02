@@ -1,6 +1,13 @@
 {
   # Enable the smokeping service
   services.smokeping.enable = true;
+
+  systemd.services."smokeping" = {
+    serviceConfig = {
+      User = lib.mkForce "nixserver-service";
+      Group = lib.mkForce "nixserver-service";
+    };
+  };
   
   # Configuration for alerts.
   # services.smokeping.alertConfig = ''
