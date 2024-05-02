@@ -168,7 +168,6 @@
   services.caddy = {
     enable = true;
     virtualHosts."localhost".extraConfig = ''
-      :80
       reverse_proxy :8081
     '';
   };
