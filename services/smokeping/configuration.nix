@@ -21,18 +21,18 @@
   #           Once set, changing the interval will require deletion or migration of all
   #           the collected data.
   #
-  # services.smokeping.databaseConfig = ''
-  #   step     = 300
-  #   pings    = 20
-  #   # consfn mrhb steps total
-  #   AVERAGE  0.5   1  1008
-  #   AVERAGE  0.5  12  4320
-  #       MIN  0.5  12  4320
-  #       MAX  0.5  12  4320
-  #   AVERAGE  0.5 144   720
-  #       MAX  0.5 144   720
-  #       MIN  0.5 144   720
-  # '';
+  services.smokeping.databaseConfig = ''
+    step     = 30
+    pings    = 5
+    # consfn mrhb steps total
+    AVERAGE  0.5   1  1008
+    AVERAGE  0.5  12  4320
+        MIN  0.5  12  4320
+        MAX  0.5  12  4320
+    AVERAGE  0.5 144   720
+        MAX  0.5 144   720
+        MIN  0.5 144   720
+  '';
   
   # Any additional customization not already included.
   # services.smokeping.extraConfig = "";
