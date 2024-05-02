@@ -164,4 +164,12 @@
   services.smokeping.user = "nixserver-service";
 
   services.tailscale.enable = true;
+
+  services.caddy = {
+    enable = true;
+    virtualHosts."localhost".extraConfig = ''
+      :80
+      reverse_proxy :8081
+    '';
+  };
 }
