@@ -35,7 +35,9 @@
   '';
   
   # Any additional customization not already included.
-  # services.smokeping.extraConfig = "";
+  services.smokeping.extraConfig = ''
+    syslogpriority = debug
+  '';
   
   # Host/IP to bind to for the web server.
   #
