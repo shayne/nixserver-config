@@ -158,13 +158,13 @@
     + Internet
     menu = Internet
     title = Internet
-    ++ 8.8.8.8
-    menu = 8.8.8.8
-    title = 8.8.8.8
+    ++ 8-8-8-8
+    menu = 8-8-8-8
+    title = 8-8-8-8
     host = 8.8.8.8
-    ++ 1.1.1.1
-    menu = 1.1.1.1
-    title = 1.1.1.1
+    ++ 1-1-1-1
+    menu = 1-1-1-1
+    title = 1-1-1-1
     host = 1.1.1.1
     ++ Google
     menu = Google
