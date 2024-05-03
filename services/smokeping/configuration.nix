@@ -22,8 +22,8 @@
   #           the collected data.
   #
   services.smokeping.databaseConfig = ''
-    step     = 30
-    pings    = 5
+    step     = 300
+    pings    = 20
     # consfn mrhb steps total
     AVERAGE  0.5   1  1008
     AVERAGE  0.5  12  4320
@@ -155,6 +155,25 @@
     menu = Tower
     title = Tower
     host = tower.home.ss.ht
+    + Internet
+    menu = Internet
+    title = Internet
+    ++ 8.8.8.8
+    menu = 8.8.8.8
+    title = 8.8.8.8
+    host = 8.8.8.8
+    ++ 1.1.1.1
+    menu = 1.1.1.1
+    title = 1.1.1.1
+    host = 1.1.1.1
+    ++ Google
+    menu = Google
+    title = Google
+    host = google.com
+    ++ Apple
+    menu = Apple
+    title = Apple
+    host = apple.com
   '';
   
   # Enable a smokeping web interface
