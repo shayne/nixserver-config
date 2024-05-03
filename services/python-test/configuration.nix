@@ -1,7 +1,7 @@
 { pkgs, ... }: {
 
   environment.systemPackages = [
-    pkgs.python
+    pkgs.python3
   ];
   
 }
