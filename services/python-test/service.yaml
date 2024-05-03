@@ -1,0 +1,3 @@
+host: nixsrv
+appdata:
+  - /var/lib/app
