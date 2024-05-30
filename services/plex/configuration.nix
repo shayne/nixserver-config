@@ -1,4 +1,8 @@
-{
+{ pkgs, ... }: {
+  environment.systemPackages = with pkgs; [
+    vim
+  ];
+  
   # Enable the plex service
   services.plex.enable = true;
   
