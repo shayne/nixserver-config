@@ -1,3 +1,6 @@
 host: pve0
 appdata:
   - /var/lib/plex
+mounts:
+  - /mnt/rust/media:/media
+  - /flash/transcode:/transcode
