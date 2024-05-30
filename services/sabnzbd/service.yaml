@@ -1,10 +1,9 @@
-host: nixsrv
+host: pve0
 appdata:
-  # TODO: persist at /pool/container-data/
   - /var/lib/sabnzbd
   - /var/lib/tailscale
 mounts:
-  - /pool/downloads:/downloads
+  - /mnt/rust/downloads:/downloads
 devices:
   - /dev/net/tun:/dev/net/tun
 cap_add:

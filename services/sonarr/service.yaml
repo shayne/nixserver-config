@@ -1,10 +1,10 @@
-host: nixsrv
+host: pve0
 appdata:
   - /config
   - /var/lib/tailscale
 mounts:
-  - /pool/downloads:/downloads
-  - /pool/media/tv:/tv
+  - /mnt/rust/downloads:/downloads
+  - /mnt/rust/media/tv:/tv
 devices:
   - /dev/net/tun:/dev/net/tun
 cap_add:

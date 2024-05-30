@@ -1,4 +1,4 @@
-host: nixsrv
+host: pve0
 appdata:
   - /var/lib/pufferpanel
   - /var/lib/tailscale

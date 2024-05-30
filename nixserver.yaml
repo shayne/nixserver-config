@@ -1,2 +1,2 @@
-nixsrv:
-  appdata_root: /pool/container-data
+pve0:
+  appdata_root: /flash/container-data
