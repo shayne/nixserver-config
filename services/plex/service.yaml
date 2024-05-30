@@ -4,3 +4,5 @@ appdata:
 mounts:
   - /mnt/rust/media:/media
   - /flash/transcode:/transcode
+ports:
+  - 32400:32400
