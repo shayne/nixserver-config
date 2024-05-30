@@ -1,8 +1,14 @@
 host: pve0
 appdata:
   - /var/lib/plex
+  - /var/lib/tailscale
 mounts:
   - /mnt/rust/media:/media
   - /flash/transcode:/transcode
 ports:
   - 32400:32400
+devices:
+  - /dev/net/tun:/dev/net/tun
+cap_add:
+  - net_admin
+  - sys_module

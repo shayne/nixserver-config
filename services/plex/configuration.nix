@@ -38,4 +38,6 @@
   
   # Group under which Plex runs.
   services.plex.group = "nixserver-service";
+  
+  services.tailscale.enable = true;
 }
