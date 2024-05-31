@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{ nixpkgs, pkgs, ... }: {
   # Enable the plex service
   services.plex.enable = true;
   
@@ -36,6 +36,7 @@
   services.plex.group = "nixserver-service";
   
   hardware.opengl.enable = true;
+  nixpkgs.config.cudaSupport = true;
 
   services.tailscale.enable = true;
 }
