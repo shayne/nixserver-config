@@ -38,6 +38,12 @@
   
   # Group under which Plex runs.
   services.plex.group = "nixserver-service";
+
+  hardware.opengl = {
+    enable = true;
+    driSupport = true;
+    driSupport32Bit = true;
+  };
   
   services.tailscale.enable = true;
 }
