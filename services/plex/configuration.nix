@@ -1,4 +1,4 @@
-{
+{ pkgs, ... }: {
   # Enable the plex service
   services.plex.enable = true;
   
