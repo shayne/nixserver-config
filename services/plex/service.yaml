@@ -15,3 +15,5 @@ cap_add:
 runtime: nvidia
 environment:
   - NVIDIA_VISIBLE_DEVICES=all
+cap_add:
+  - CAP_SYS_ADMIN

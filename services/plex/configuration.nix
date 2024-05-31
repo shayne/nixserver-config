@@ -1,4 +1,4 @@
-{ nixpkgs, pkgs, ... }: {
+{ nixpkgs, ... }: {
   # Enable the plex service
   services.plex.enable = true;
   
@@ -27,7 +27,7 @@
   # The Plex package to use. Plex subscribers may wish to use their own
   # package here, pointing to subscriber-only server versions.
   #
-  services.plex.package = pkgs.unstable.plex;
+  # services.plex.package = pkgs.unstable.plex;
   
   # User account under which Plex runs.
   services.plex.user = "nixserver-service";
