@@ -37,6 +37,7 @@
   
   hardware.opengl.enable = true;
   nixpkgs.config.cudaSupport = true;
+  services.xserver.videoDrivers = [ "nvidia" ];
 
   services.tailscale.enable = true;
 }
