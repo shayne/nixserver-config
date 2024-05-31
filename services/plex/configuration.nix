@@ -1,8 +1,4 @@
-{ pkgs, ... }: {
-  environment.systemPackages = with pkgs; [
-    vim
-  ];
-  
+{
   # Enable the plex service
   services.plex.enable = true;
   
@@ -39,11 +35,5 @@
   # Group under which Plex runs.
   services.plex.group = "nixserver-service";
 
-  hardware.opengl = {
-    enable = true;
-    driSupport = true;
-    driSupport32Bit = true;
-  };
-  
   services.tailscale.enable = true;
 }
