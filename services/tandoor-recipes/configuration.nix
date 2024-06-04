@@ -17,4 +17,10 @@
   # for available options.
   #
   # services.tandoor-recipes.extraConfig = { };
+
+  systemd.services."tandoor-recipes".serviceConfig = {
+    DynamicUser = lib.mkForce false;
+    User = "nixserver-service";
+    Group = "nixserver-service";
+  };
 }
