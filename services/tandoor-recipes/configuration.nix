@@ -20,7 +20,7 @@
 
   systemd.services."tandoor-recipes".serviceConfig = {
     DynamicUser = lib.mkForce false;
-    User = "nixserver-service";
-    Group = "nixserver-service";
+    User = lib.mkForce "nixserver-service";
+    Group = lib.mkForce "nixserver-service";
   };
 }
