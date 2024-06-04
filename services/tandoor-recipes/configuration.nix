@@ -1,4 +1,4 @@
-{
+{ lib, ... }: {
   # Enable the tandoor-recipes service
   services.tandoor-recipes.enable = true;
   
