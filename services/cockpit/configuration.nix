@@ -17,7 +17,7 @@
   #
   services.cockpit.settings = {
     WebService = {
-      Origins = [ "https://cockpit.shayne.ts.net" ];
+      Origins = "https://cockpit.shayne.ts.net";
     };
   };
 
