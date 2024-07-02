@@ -15,7 +15,11 @@
   #
   # See the [documentation](https://cockpit-project.org/guide/latest/cockpit.conf.5.html), that is also available with `man cockpit.conf.5` for details.
   #
-  # services.cockpit.settings = { };
+  services.cockpit.settings = {
+    WebService = {
+      Origins = [ "https://cockpit.shayne.ts.net/" ];
+    };
+  };
 
   services.tailscale.enable = true;
 }
