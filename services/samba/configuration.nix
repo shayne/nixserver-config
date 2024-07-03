@@ -1,5 +1,5 @@
 {
-  users.users.shayne.isNormalUser = false;
+  users.users.shayne.isSystemUser = true;
   
   services.avahi = {
     enable = true;
