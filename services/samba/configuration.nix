@@ -1,4 +1,6 @@
 {
+  users.users.shayne.isNormalUser = false;
+  
   services.avahi = {
     enable = true;
     nssmdns = true;
@@ -10,6 +12,7 @@
       userServices = true;
     };
   };
+  
   services.avahi.extraServiceFiles = {
     smb = ''
       <?xml version="1.0" standalone='no'?><!--*-nxml-*-->
