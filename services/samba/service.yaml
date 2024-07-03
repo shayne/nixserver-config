@@ -1,5 +1,6 @@
 host: pve0
 appdata:
+  - /var/lib/samba
   - /var/lib/tailscale
 mounts:
   - /mnt/rust/media:/media
