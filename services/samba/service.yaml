@@ -1,0 +1,3 @@
+host: pve0
+mounts:
+  - /mnt/rust/media:/media
