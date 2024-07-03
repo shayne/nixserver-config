@@ -4,6 +4,7 @@ appdata:
   - /var/lib/tailscale
 mounts:
   - /mnt/rust/media:/media
+  - /flash/documents:/documents
 devices:
   - /dev/net/tun:/dev/net/tun
 cap_add:

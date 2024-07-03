@@ -107,6 +107,18 @@
         "veto files" = "/.apdisk/.DS_Store/.TemporaryItems/.Trashes/desktop.ini/ehthumbs.db/Network Trash Folder/Temporary Items/Thumbs.db/";
         "delete veto files" = "yes";
       };
+      documents = {
+        path = "/documents";
+        browseable = "yes";
+        "read only" = "no";
+      
+        # Make this private
+        "guest ok" = "no";
+        "valid users" = "shayne";
+      
+        "veto files" = "/.apdisk/.DS_Store/.TemporaryItems/.Trashes/desktop.ini/ehthumbs.db/Network Trash Folder/Temporary Items/Thumbs.db/";
+        "delete veto files" = "yes";
+      };
       # melias122 = {
       #   path = "/pool/samba/melias122";
       #   browseable = "yes";
