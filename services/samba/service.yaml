@@ -1,3 +1,5 @@
 host: pve0
+appdata:
+  - /var/lib/tailscale
 mounts:
   - /mnt/rust/media:/media

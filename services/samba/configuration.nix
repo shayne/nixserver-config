@@ -118,4 +118,6 @@
       # };
     };
   };
+
+  services.tailscale.enable = true;
 }
