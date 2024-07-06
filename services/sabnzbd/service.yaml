@@ -3,7 +3,7 @@ appdata:
   - /var/lib/sabnzbd
   - /var/lib/tailscale
 mounts:
-  - /mnt/rust/downloads:/downloads
+  - /flash/downloads:/downloads
 devices:
   - /dev/net/tun:/dev/net/tun
 cap_add:
