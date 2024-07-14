@@ -72,6 +72,11 @@ in {
   # :::
   # services.searx.runInUwsgi = false;
 
+  systemd.services."searx".serviceConfig = {
+    User = "nixserver-service";
+    Group = "nixserver-service";
+  };
+
   services.tailscale.enable = true;
 
   services.cloudflared.enable = true;
