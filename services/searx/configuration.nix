@@ -29,7 +29,7 @@
   # into the world-readable Nix store.
   #
   # :::
-  # services.searx.settingsFile = "/run/searx/settings.yml";
+  services.searx.settingsFile = "/var/lib/searx/settings.yml";
   
   # Configure a local Redis server for SearXNG. This is required if you
   # want to enable the rate limiter and bot protection of SearXNG.

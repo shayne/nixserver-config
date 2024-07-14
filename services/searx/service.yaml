@@ -1,6 +1,6 @@
 host: rk1
 appdata:
-  - /run/searx
+  - /var/lib/searx
   - /var/lib/tailscale
 devices:
   - /dev/net/tun:/dev/net/tun
