@@ -16,11 +16,7 @@ in {
   # [docs](https://searx.github.io/searx/admin/settings.html).
   #
   # :::
-  services.searx.settings = {
-    server = {
-      secret_key = "YjiZ2#W*EHNqQr";
-    };
-  };
+  # services.searx.settings = { };
   
   # The path of the Searx server settings.yml file. If no file is
   # specified, a default file is used (default config file has debug mode
