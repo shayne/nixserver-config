@@ -1,4 +1,4 @@
-{ pkgs, ... }: let
+{ pkgs, lib, ... }: let
   hostname = pkgs.readSecret "searx_hostname";
   tunnelId = pkgs.readSecret "searx_tunnel_id";
 in {
@@ -73,8 +73,8 @@ in {
   # services.searx.runInUwsgi = false;
 
   systemd.services."searx".serviceConfig = {
-    User = "nixserver-service";
-    Group = "nixserver-service";
+    User = lib.mkForce "nixserver-service";
+    Group = lib.mkForce "nixserver-service";
   };
 
   services.tailscale.enable = true;
