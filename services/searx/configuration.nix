@@ -1,4 +1,7 @@
-{ pkgs, ... }: {
+{ pkgs, ... }: let
+  hostname = pkgs.readSecret "searx_hostname";
+  tunnelId = pkgs.readSecret "searx_tunnel_id";
+in {
   # Enable the searx service
   services.searx.enable = true;
   
@@ -74,4 +77,17 @@
   # services.searx.runInUwsgi = false;
 
   services.tailscale.enable = true;
+
+  services.cloudflared.enable = true;
+  services.cloudflared.tunnels = {
+    "${tunnelId}" = {
+      credentialsFile = "${toString (pkgs.writeSecret "searx_credentials_file")}";
+      default = "http_status:404";
+      ingress = {
+        "${hostname}" = {
+          service = "http://localhost:8888";
+        };
+      };
+    };
+  };
 }
