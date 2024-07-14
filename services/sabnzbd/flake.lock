@@ -1,33 +1,33 @@
 {
   "nodes": {
-    "nixos-unstable": {
+    "nixpkgs": {
       "locked": {
-        "lastModified": 1716948383,
-        "narHash": "sha256-SzDKxseEcHR5KzPXLwsemyTR/kaM9whxeiJohbL04rs=",
+        "lastModified": 1720823163,
+        "narHash": "sha256-FZ5dnrvKkln9ESdoTR8R7GKW9rNpXNZrxGsOXsbsTpE=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "ad57eef4ef0659193044870c731987a6df5cf56b",
+        "rev": "f12ee5f64c6a09995e71c9626d88c4efa983b488",
         "type": "github"
       },
       "original": {
         "owner": "NixOS",
-        "ref": "nixos-unstable",
+        "ref": "nixos-24.05",
         "repo": "nixpkgs",
         "type": "github"
       }
     },
-    "nixpkgs": {
+    "nixpkgs-unstable": {
       "locked": {
-        "lastModified": 1716633019,
-        "narHash": "sha256-xim1b5/HZYbWaZKyI7cn9TJCM6ewNVZnesRr00mXeS4=",
+        "lastModified": 1720906138,
+        "narHash": "sha256-tEY8vHDE0psT5qH1RERdZmYGVcMi4yf4WLrBuJ04EBQ=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "9d29cd266cebf80234c98dd0b87256b6be0af44e",
+        "rev": "d55afb5fc2e24e0852c9da179fbe2a74a2687697",
         "type": "github"
       },
       "original": {
         "owner": "NixOS",
-        "ref": "nixos-23.11",
+        "ref": "nixpkgs-unstable",
         "repo": "nixpkgs",
         "type": "github"
       }
@@ -50,11 +50,13 @@
     },
     "nixserver": {
       "inputs": {
-        "nixos-unstable": "nixos-unstable",
+        "nixos-unstable": [
+          "nixpkgs-unstable"
+        ],
         "nixpkgs": "nixpkgs_2"
       },
       "locked": {
-        "lastModified": 1717078174,
+        "lastModified": 1720969816,
         "narHash": "sha256-m0gMuHHcKWLXQBdhD3yYGfuz/ds6B0U/rZ9YGNOCxrQ=",
         "type": "tarball",
         "url": "https://releases.nixserver.io/latest/nixosModules"
@@ -67,7 +69,24 @@
     "root": {
       "inputs": {
         "nixpkgs": "nixpkgs",
-        "nixserver": "nixserver"
+        "nixpkgs-unstable": "nixpkgs-unstable",
+        "nixserver": "nixserver",
+        "secrets": "secrets"
+      }
+    },
+    "secrets": {
+      "locked": {
+        "lastModified": 1711336187,
+        "narHash": "sha256-YFI+O5AmS73MK9IM8qCJuZtRs4MWVqvA2uYCIGSxlMM=",
+        "owner": "nixserver-io",
+        "repo": "secrets-placeholder",
+        "rev": "2f29309d8ad16abb026ef5a2c6f7672cca533bcf",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixserver-io",
+        "repo": "secrets-placeholder",
+        "type": "github"
       }
     }
   },
