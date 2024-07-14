@@ -7,7 +7,7 @@
     nixserver.inputs.nixos-unstable.follows = "nixpkgs-unstable";
   };
 
-  outputs = { self, nixpkgs, nixserver, secrets }@inputs: {
+  outputs = { self, nixpkgs, nixserver, secrets, ... }@inputs: {
     nixosConfigurations.container = nixpkgs.lib.nixosSystem {
       system = "aarch64-linux";
       modules = [
