@@ -9,7 +9,7 @@
 
   outputs = { self, nixpkgs, nixserver, secrets, ... }@inputs: {
     nixosConfigurations.container = nixpkgs.lib.nixosSystem {
-      system = "x86_64-linux";
+      system = "aarch64-linux";
       modules = [
         nixserver.nixosModules.docker
         ./configuration.nix
