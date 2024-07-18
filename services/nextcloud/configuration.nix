@@ -175,7 +175,7 @@
   # services.nextcloud.extraAppsEnable = true;
   
   # Storage path of nextcloud.
-  services.nextcloud.home = "/var/lib/nextcloud";
+  services.nextcloud.home = "/var/lib/nextcloud/home";
   
   # FQDN for the nextcloud instance.
   # Type: string
@@ -417,7 +417,7 @@
   # #   # Group = lib.mkForce "nixserver-service";
   # # };
 
-  # systemd.services."nextcloud-cron".serviceConfig.User = lib.mkForce "nixserver-service";
+  systemd.services."nextcloud-cron".serviceConfig.User = lib.mkForce "nixserver-service";
   # # systemd.services."nextcloud-cron".serviceConfig = {
   # #   User = lib.mkForce "nixserver-service";
   # #   # Group = lib.mkForce "nixserver-service";
