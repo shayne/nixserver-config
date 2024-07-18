@@ -1,3 +1,9 @@
 host: pve0
 appdata:
   - /var/lib/nextcloud
+  - /var/lib/tailscale
+devices:
+  - /dev/net/tun:/dev/net/tun
+cap_add:
+  - net_admin
+  - sys_module

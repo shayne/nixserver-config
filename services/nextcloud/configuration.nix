@@ -179,7 +179,7 @@
   
   # FQDN for the nextcloud instance.
   # Type: string
-  # services.nextcloud.hostName = "";
+  services.nextcloud.hostName = "nextcloud.shayne.ts.net";
   
   # Use HTTPS for generated links.
   # services.nextcloud.https = false;
@@ -410,4 +410,6 @@
   
   # Log level
   # services.nextcloud.notify_push.logLevel = "error";
+
+  services.tailscale.enable = true;
 }
