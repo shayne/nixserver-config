@@ -411,6 +411,18 @@
   # Log level
   # services.nextcloud.notify_push.logLevel = "error";
 
+  systemd.services."nixserver-nextcloud-mkdirs" = {
+    enable = true;
+    before = [ "nextcloud-setup.target" ];
+    path = [ pkgs.coreutils ];
+    serviceConfig = {
+      User = "nixserver-service";
+    };
+    script = ''
+      mkdir /var/lib/nextcloud/config /var/lib/nextcloud/data /var/lib/nextcloud/store-apps
+    '';
+  };
+
   systemd.services."nextcloud-setup".serviceConfig.User = lib.mkForce "nixserver-service"; 
   # # systemd.services."nextcloud-setup".serviceConfig = {
   # #   User = lib.mkForce "nixserver-service";
