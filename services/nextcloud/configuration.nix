@@ -455,7 +455,7 @@
   # #   };
   # # };
 
-  users.groups."nixserver-service".members = [ "nextcloud" config.services.nginx.user ];
+  users.groups."nextcloud".members = [ "nixserver-service" config.services.nginx.user ];
   
   services.tailscale.enable = true;
 }
