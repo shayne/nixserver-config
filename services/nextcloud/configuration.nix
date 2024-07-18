@@ -1,4 +1,4 @@
-{ pkgs, lib, ... }: {
+{ config, pkgs, lib, ... }: {
   # Enable the nextcloud service
   services.nextcloud.enable = true;
   
@@ -442,6 +442,8 @@
   # #     group = lib.mkForce "nixserver-service";
   # #   };
   # # };
+
+  users.groups."nixserver-service".members = [ "nextcloud" config.services.nginx.user ];
   
   services.tailscale.enable = true;
 }
