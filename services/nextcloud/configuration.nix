@@ -175,7 +175,7 @@
   # services.nextcloud.extraAppsEnable = true;
   
   # Storage path of nextcloud.
-  services.nextcloud.home = "/var/lib/nextcloud/home";
+  services.nextcloud.home = "/var/lib/nextcloud";
   
   # FQDN for the nextcloud instance.
   # Type: string
