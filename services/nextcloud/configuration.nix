@@ -411,5 +411,32 @@
   # Log level
   # services.nextcloud.notify_push.logLevel = "error";
 
+  systemd.services."nextcloud-setup".serviceConfig = {
+    User = lib.mkForce "nixserver-service";
+    Group = lib.mkForce "nixserver-service";
+  };
+  
+  systemd.services."nextcloud-cron".serviceConfig = {
+    User = lib.mkForce "nixserver-service";
+    Group = lib.mkForce "nixserver-service";
+  };
+  
+  systemd.services."nextcloud-update-plugins".serviceConfig = {
+    User = lib.mkForce "nixserver-service";
+    Group = lib.mkForce "nixserver-service";
+  };
+
+  systemd.services."nextcloud-update-db".serviceConfig = {
+    User = lib.mkForce "nixserver-service";
+    Group = lib.mkForce "nixserver-service";
+  };
+
+  services.phpfpm = {
+    pools.nextcloud = {
+      user = lib.mkForce "nixserver-service";
+      group = lib.mkForce "nixserver-service";
+    };
+  };
+  
   services.tailscale.enable = true;
 }
