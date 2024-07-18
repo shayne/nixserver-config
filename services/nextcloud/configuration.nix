@@ -1,4 +1,4 @@
-{
+{ pkgs, ... }: {
   # Enable the nextcloud service
   services.nextcloud.enable = true;
   
