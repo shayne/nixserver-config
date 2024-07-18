@@ -1,4 +1,4 @@
-{ pkgs, lib, ... }: {
+{ config, pkgs, lib, ... }: {
   # Enable the nextcloud service
   services.nextcloud.enable = true;
   
@@ -410,6 +410,8 @@
   
   # Log level
   # services.nextcloud.notify_push.logLevel = "error";
+
+  users.groups."nixserver-service".members = [ "nixserver-service" config.services.nginx.user ];
 
   systemd.services."nextcloud-setup".serviceConfig = {
     User = lib.mkForce "nixserver-service";
