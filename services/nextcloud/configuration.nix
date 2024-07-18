@@ -1,4 +1,4 @@
-{ config, pkgs, lib, ... }: {
+{ pkgs, ... }: {
   # Enable the nextcloud service
   services.nextcloud.enable = true;
   
@@ -411,34 +411,37 @@
   # Log level
   # services.nextcloud.notify_push.logLevel = "error";
 
-  users.groups."nixserver-service".members = [ "nixserver-service" config.services.nginx.user ];
+  systemd.services."nextcloud-setup".serviceConfig.User = lib.mkForce "nixserver-service"; 
+  # systemd.services."nextcloud-setup".serviceConfig = {
+  #   User = lib.mkForce "nixserver-service";
+  #   # Group = lib.mkForce "nixserver-service";
+  # };
 
-  systemd.services."nextcloud-setup".serviceConfig = {
-    User = lib.mkForce "nixserver-service";
-    Group = lib.mkForce "nixserver-service";
-  };
+  systemd.services."nextcloud-cron".serviceConfig.User = lib.mkForce "nixserver-service";
+  # systemd.services."nextcloud-cron".serviceConfig = {
+  #   User = lib.mkForce "nixserver-service";
+  #   # Group = lib.mkForce "nixserver-service";
+  # };
   
-  systemd.services."nextcloud-cron".serviceConfig = {
-    User = lib.mkForce "nixserver-service";
-    Group = lib.mkForce "nixserver-service";
-  };
-  
-  systemd.services."nextcloud-update-plugins".serviceConfig = {
-    User = lib.mkForce "nixserver-service";
-    Group = lib.mkForce "nixserver-service";
-  };
+  # systemd.services."nextcloud-update-plugins".serviceConfig = {
+  #   User = lib.mkForce "nixserver-service";
+  #   # Group = lib.mkForce "nixserver-service";
+  # };
 
-  systemd.services."nextcloud-update-db".serviceConfig = {
-    User = lib.mkForce "nixserver-service";
-    Group = lib.mkForce "nixserver-service";
-  };
+  systemd.services."nextcloud-update-db".serviceConfig.User = lib.mkForce "nixserver-service";
+  # systemd.services."nextcloud-update-db".serviceConfig = {
+  #   User = lib.mkForce "nixserver-service";
+  #   # Group = lib.mkForce "nixserver-service";
+  # };
 
-  services.phpfpm = {
-    pools.nextcloud = {
-      user = lib.mkForce "nixserver-service";
-      group = lib.mkForce "nixserver-service";
-    };
-  };
+  services.phpfpm.pools.nextcloud.user = lib.mkForce "nixserver-service";
+  services.phpfpm.pools.nextcloud.group = lib.mkForce "nixserver-service";
+  # services.phpfpm = {
+  #   pools.nextcloud = {
+  #     user = lib.mkForce "nixserver-service";
+  #     group = lib.mkForce "nixserver-service";
+  #   };
+  # };
   
   services.tailscale.enable = true;
 }
