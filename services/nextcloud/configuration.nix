@@ -412,10 +412,10 @@
   # services.nextcloud.notify_push.logLevel = "error";
 
   systemd.services."nixserver-nextcloud-mkdirs" = {
-    enable = true;
     before = [ "nextcloud-setup.service" ];
     path = [ pkgs.coreutils ];
     serviceConfig = {
+      Type = "oneshot";
       User = "nixserver-service";
     };
     script = ''
