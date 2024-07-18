@@ -413,13 +413,14 @@
 
   systemd.services."nixserver-nextcloud-mkdirs" = {
     enable = true;
-    before = [ "nextcloud-setup.target" ];
+    before = [ "nextcloud-setup.service" ];
     path = [ pkgs.coreutils ];
     serviceConfig = {
       User = "nixserver-service";
     };
     script = ''
       mkdir /var/lib/nextcloud/config /var/lib/nextcloud/data /var/lib/nextcloud/store-apps
+      chmod -R g+w /var/lib/nextcloud
     '';
   };
 
