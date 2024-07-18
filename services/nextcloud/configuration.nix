@@ -25,7 +25,7 @@
   # setup of Nextcloud by the systemd service `nextcloud-setup.service`.
   #
   # Type: string
-  # services.nextcloud.config.adminpassFile = "";
+  services.nextcloud.config.adminpassFile = "${toString (pkgs.writeSecret "nextcloud_admin_password")}";
   
   # Options for PHP's php.ini file for nextcloud.
   #
