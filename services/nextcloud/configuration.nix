@@ -411,7 +411,7 @@
   # Log level
   # services.nextcloud.notify_push.logLevel = "error";
 
-  # systemd.services."nextcloud-setup".serviceConfig.User = lib.mkForce "nixserver-service"; 
+  systemd.services."nextcloud-setup".serviceConfig.User = lib.mkForce "nixserver-service"; 
   # # systemd.services."nextcloud-setup".serviceConfig = {
   # #   User = lib.mkForce "nixserver-service";
   # #   # Group = lib.mkForce "nixserver-service";
