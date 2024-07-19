@@ -430,7 +430,7 @@
       chown nixserver-service:nextcloud /nextcloud-files /nextcloud-files/* /var/lib/nextcloud/store-apps
       # chmod -R g+w /nextcloud-files /nextcloud-files/*
       chmod g+w /nextcloud-files /nextcloud-files/* /var/lib/nextcloud/store-apps
-      chmod 770 /nextcloud-files/data
+      chmod 770 /nextcloud-files/data /nextcloud-files/config
     '';
   };
 
@@ -446,7 +446,7 @@
       chown nixserver-service:nextcloud /nextcloud-files /nextcloud-files/* /var/lib/nextcloud/store-apps
       # chmod -R g+w /var/lib/nextcloud /nextcloud-files
       chmod g+w /nextcloud-files /nextcloud-files/* /var/lib/nextcloud/store-apps
-      chmod 770 /nextcloud-files/data
+      chmod 770 /nextcloud-files/data /nextcloud-files/config
     '';
   };
 
