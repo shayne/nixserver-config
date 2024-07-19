@@ -496,10 +496,15 @@
       #type database  DBuser  auth-method
       local all       all     trust
     '';
-    ensureUsers = [{
-      name = "nixserver";
-      # ensureDBOwnership = true;
-    }];
+    # ensureUsers = [{
+    #   name = "nixserver";
+    #   # ensureDBOwnership = true;
+    # }];
+    initialScript = pkgs.writeText "backend-initScript" ''
+      CREATE ROLE nextcloud LOGIN;
+      CREATE DATABASE nextcloud;
+      GRANT ALL PRIVILEGES ON DATABASE nextcloud TO nextcloud;
+    '';
   };
 
   services.tailscale.enable = true;
