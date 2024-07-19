@@ -449,8 +449,8 @@
 
   # systemd.services."nextcloud-setup".serviceConfig.User = lib.mkForce "nixserver-service"; 
   systemd.services."nextcloud-setup" = {
-    after = "postgresql.service";
-    requires = "postgresql.service";
+    after = [ "postgresql.service" ];
+    requires = [ "postgresql.service" ];
     serviceConfig = {
       User = lib.mkForce "nixserver-service";
       Group = lib.mkForce "nextcloud";
