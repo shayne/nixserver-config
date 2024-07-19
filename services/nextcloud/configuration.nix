@@ -426,7 +426,7 @@
       User = "root";
     };
     script = ''
-      mkdir -p /data
+      mkdir -p /data/data
       chown nixserver-service:nextcloud /data /var/lib/nextcloud
       # chmod -R g+w /var/lib/nextcloud /data
       chmod g+w /var/lib/nextcloud /data
