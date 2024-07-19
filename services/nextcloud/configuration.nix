@@ -181,7 +181,7 @@
   # services.nextcloud.extraAppsEnable = true;
   
   # Storage path of nextcloud.
-  services.nextcloud.home = "/var/lib/nextcloud";
+  services.nextcloud.home = "/nextcloud-files";
   
   # FQDN for the nextcloud instance.
   # Type: string
@@ -426,10 +426,10 @@
       User = "root";
     };
     script = ''
-      mkdir -p /nextcloud-files/data /nextcloud-files/config /var/lib/nextcloud/store-apps
-      chown nixserver-service:nextcloud /nextcloud-files /nextcloud-files/* /var/lib/nextcloud/store-apps
+      mkdir -p /nextcloud-files/data /nextcloud-files/config /nextcloud-files/store-apps
+      chown nixserver-service:nextcloud /nextcloud-files /nextcloud-files/* /nextcloud-files/store-apps
       # chmod -R g+w /nextcloud-files /nextcloud-files/*
-      chmod g+w /nextcloud-files /nextcloud-files/* /var/lib/nextcloud/store-apps
+      chmod g+w /nextcloud-files /nextcloud-files/* /nextcloud-files/store-apps
       chmod 770 /nextcloud-files/data /nextcloud-files/config
     '';
   };
@@ -443,9 +443,9 @@
       User = "root";
     };
     script = ''
-      chown nixserver-service:nextcloud /nextcloud-files /nextcloud-files/* /var/lib/nextcloud/store-apps
-      # chmod -R g+w /var/lib/nextcloud /nextcloud-files
-      chmod g+w /nextcloud-files /nextcloud-files/* /var/lib/nextcloud/store-apps
+      chown nixserver-service:nextcloud /nextcloud-files /nextcloud-files/* /nextcloud-files/store-apps
+      # chmod -R g+w /nextcloud-files
+      chmod g+w /nextcloud-files /nextcloud-files/* /nextcloud-files/store-apps
       chmod 770 /nextcloud-files/data /nextcloud-files/config
     '';
   };
