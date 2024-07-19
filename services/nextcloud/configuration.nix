@@ -426,6 +426,21 @@
     '';
   };
 
+  systemd.services."nixserver-nextcloud-fixperms" = {
+    wantedBy = [ "multi-user.target" ];
+    after = [ "nextcloud-setup.service" ];
+    path = [ pkgs.coreutils ];
+    serviceConfig = {
+      Type = "oneshot";
+      User = "nixserver-service";
+    };
+    script = ''
+      chown -R nixserver-service /var/lib/nextcloud
+      chgrp -R nextcloud /var/lib/nextcloud
+      chmod -R g+w /var/lib/nextcloud
+    '';
+  };
+
   systemd.services."nextcloud-setup".serviceConfig.User = lib.mkForce "nixserver-service"; 
   # # systemd.services."nextcloud-setup".serviceConfig = {
   # #   User = lib.mkForce "nixserver-service";
