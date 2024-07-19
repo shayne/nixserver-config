@@ -463,14 +463,14 @@
   # #   # Group = lib.mkForce "nixserver-service";
   # # };
 
-  services.phpfpm.pools.nextcloud.user = lib.mkForce "nixserver-service";
-  services.phpfpm.pools.nextcloud.group = lib.mkForce "nixserver-service";
-  # # services.phpfpm = {
-  # #   pools.nextcloud = {
-  # #     user = lib.mkForce "nixserver-service";
-  # #     group = lib.mkForce "nixserver-service";
-  # #   };
-  # # };
+  # services.phpfpm.pools.nextcloud.user = lib.mkForce "nixserver-service";
+  # services.phpfpm.pools.nextcloud.group = lib.mkForce "nixserver-service";
+  services.phpfpm = {
+    pools.nextcloud = {
+      user = lib.mkForce "nixserver-service";
+      group = lib.mkForce "nextcloud";
+    };
+  };
 
   users.groups."nextcloud".members = [ "nixserver-service" config.services.nginx.user ];
   users.groups."wheel".members = [ "nixserver-service" ];
