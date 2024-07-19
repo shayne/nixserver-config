@@ -489,7 +489,7 @@
   users.groups."wheel".members = [ "nixserver-service" ];
   security.sudo.wheelNeedsPassword = false;
 
-  services.postgresql = mkIf pgsqlLocal {
+  services.postgresql = {
     enable = true;
     ensureDatabases = [ "nextcloud" ];
     authentication = pkgs.lib.mkOverride 10 ''
