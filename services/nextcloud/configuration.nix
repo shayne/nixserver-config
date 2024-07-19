@@ -412,6 +412,7 @@
   # services.nextcloud.notify_push.logLevel = "error";
 
   systemd.services."nixserver-nextcloud-mkdirs" = {
+    wantedBy = [ "multi-user.target" ];
     before = [ "nextcloud-setup.service" ];
     path = [ pkgs.coreutils ];
     serviceConfig = {
