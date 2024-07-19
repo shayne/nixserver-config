@@ -504,6 +504,9 @@
       CREATE ROLE nextcloud LOGIN;
       CREATE DATABASE nextcloud;
       GRANT ALL PRIVILEGES ON DATABASE nextcloud TO nextcloud;
+      \c nextcloud
+      GRANT USAGE ON SCHEMA public TO nextcloud;
+      GRANT CREATE ON SCHEMA public TO nextcloud;
     '';
   };
 
