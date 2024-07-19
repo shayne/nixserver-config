@@ -2,6 +2,8 @@ host: pve0
 appdata:
   - /var/lib/nextcloud
   - /var/lib/tailscale
+mounts:
+  - /mnt/rust/nextcloud:/data
 devices:
   - /dev/net/tun:/dev/net/tun
 cap_add:

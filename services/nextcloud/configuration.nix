@@ -151,6 +151,7 @@
   #
   # This folder will be populated with a config.php file and a data folder which contains the state of the instance (excluding the database).";
   # services.nextcloud.datadir = config.services.nextcloud.home;
+  services.nextcloud.datadir = "/data";
   
   # Whether to enable the ImageMagick module for PHP.
   #
