@@ -88,7 +88,7 @@
   
   # Database name.
   # services.nextcloud.config.dbname = "nextcloud";
-  services.nextcloud.config.dbname = "nixserver-service";
+  # services.nextcloud.config.dbname = "nixserver-service";
   
   # The full path to a file that contains the database password.
   # services.nextcloud.config.dbpassFile = null;
@@ -105,7 +105,7 @@
   
   # Database user.
   # services.nextcloud.config.dbuser = "nextcloud";
-  services.nextcloud.config.dbuser = "nixserver-service";
+  # services.nextcloud.config.dbuser = "nixserver-service";
   
   # An [ISO 3166-1](https://www.iso.org/iso-3166-country-codes.html)
   # country code which replaces automatic phone-number detection
