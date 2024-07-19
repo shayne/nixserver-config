@@ -142,6 +142,7 @@
   
   # Whether to create the database and database user locally.
   # services.nextcloud.database.createLocally = false;
+  services.nextcloud.database.createLocally = true;
   
   # Nextcloud's data storage path.  Will be [](#opt-services.nextcloud.home) by default.
   #
