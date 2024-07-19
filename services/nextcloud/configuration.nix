@@ -428,7 +428,7 @@
 
   systemd.services."nixserver-nextcloud-fixperms" = {
     wantedBy = [ "multi-user.target" ];
-    after = [ "nextcloud-setup.service" ];
+    after = [ "phpfpm-nextcloud.service" ];
     path = [ pkgs.coreutils ];
     serviceConfig = {
       Type = "oneshot";
