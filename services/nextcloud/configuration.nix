@@ -105,6 +105,7 @@
   # Database user.
   # services.nextcloud.config.dbuser = "nextcloud";
   services.nextcloud.config.dbuser = "nixserver-service";
+  services.postgresql.ensureDatabases = [ "nixserver-service" ];
   
   # An [ISO 3166-1](https://www.iso.org/iso-3166-country-codes.html)
   # country code which replaces automatic phone-number detection
