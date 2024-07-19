@@ -426,10 +426,10 @@
       User = "root";
     };
     script = ''
-      mkdir -p /var/lib/nextcloud/config /var/lib/nextcloud/data /var/lib/nextcloud/store-apps
-      chown -R nixserver-service:nextcloud /var/lib/nextcloud
-      chmod -R g+w /var/lib/nextcloud
-      chmod 770 /var/lib/nextcloud/data
+      mkdir -p /var/lib/nextcloud/config /var/lib/nextcloud/store-apps
+      chown -R nixserver-service:nextcloud /var/lib/nextcloud /data
+      chmod -R g+w /var/lib/nextcloud /data
+      chmod 770 /data
     '';
   };
 
@@ -442,9 +442,9 @@
       User = "root";
     };
     script = ''
-      chown -R nixserver-service:nextcloud /var/lib/nextcloud
-      chmod -R g+w /var/lib/nextcloud
-      chmod 770 /var/lib/nextcloud/data
+      chown -R nixserver-service:nextcloud /var/lib/nextcloud /data
+      chmod -R g+w /var/lib/nextcloud /data
+      chmod 770 /data
     '';
   };
 
