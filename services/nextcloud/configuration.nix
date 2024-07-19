@@ -496,10 +496,10 @@
       #type database  DBuser  auth-method
       local all       all     trust
     '';
-    # ensureUsers = [{
-    #   name = cfg.config.dbuser;
-    #   ensureDBOwnership = true;
-    # }];
+    ensureUsers = [{
+      name = "nixserver";
+      # ensureDBOwnership = true;
+    }];
   };
 
   services.tailscale.enable = true;
