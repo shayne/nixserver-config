@@ -473,8 +473,8 @@
   };
 
   users.groups."nextcloud".members = [ "nixserver-service" config.services.nginx.user ];
-  users.groups."wheel".members = [ "nixserver-service" ];
-  security.sudo.wheelNeedsPassword = false;
+  # users.groups."wheel".members = [ "nixserver-service" ];
+  # security.sudo.wheelNeedsPassword = false;
   
   services.tailscale.enable = true;
 }
