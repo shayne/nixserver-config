@@ -471,12 +471,12 @@
 
   # services.phpfpm.pools.nextcloud.user = lib.mkForce "nixserver-service";
   # services.phpfpm.pools.nextcloud.group = lib.mkForce "nixserver-service";
-  services.phpfpm = {
-    pools.nextcloud = {
-      user = lib.mkForce "nixserver-service";
-      group = lib.mkForce "nextcloud";
-    };
-  };
+  # services.phpfpm = {
+  #   pools.nextcloud = {
+  #     user = lib.mkForce "nixserver-service";
+  #     group = lib.mkForce "nextcloud";
+  #   };
+  # };
 
   users.groups."nextcloud".members = [ "nixserver-service" config.services.nginx.user ];
   # this is a workaround for the nextcloud-occ script which calls 'sudo -u nextcloud'
