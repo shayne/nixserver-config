@@ -417,11 +417,11 @@
     path = [ pkgs.coreutils ];
     serviceConfig = {
       Type = "oneshot";
-      User = "nixserver-service";
+      User = "root";
     };
     script = ''
       mkdir /var/lib/nextcloud/config /var/lib/nextcloud/data /var/lib/nextcloud/store-apps
-      chgrp nextcloud /var/lib/nextcloud
+      chmod nixserver-service:nextcloud /var/lib/nextcloud
       chmod -R g+w /var/lib/nextcloud
     '';
   };
@@ -432,11 +432,10 @@
     path = [ pkgs.coreutils ];
     serviceConfig = {
       Type = "oneshot";
-      User = "nixserver-service";
+      User = "root";
     };
     script = ''
-      chown -R nixserver-service /var/lib/nextcloud
-      chgrp -R nextcloud /var/lib/nextcloud
+      chmod -R nixserver-service:nextcloud /var/lib/nextcloud
       chmod -R g+w /var/lib/nextcloud
     '';
   };
