@@ -85,6 +85,7 @@
   # defaults to the correct Unix socket instead.
   #
   # services.nextcloud.config.dbhost = "localhost";
+  services.nextcloud.config.dbhost = "/run/postgresql";
   
   # Database name.
   # services.nextcloud.config.dbname = "nextcloud";
@@ -145,7 +146,6 @@
   
   # Whether to create the database and database user locally.
   # services.nextcloud.database.createLocally = false;
-  services.nextcloud.database.createLocally = true;
   
   # Nextcloud's data storage path.  Will be [](#opt-services.nextcloud.home) by default.
   #
@@ -448,9 +448,13 @@
   };
 
   # systemd.services."nextcloud-setup".serviceConfig.User = lib.mkForce "nixserver-service"; 
-  systemd.services."nextcloud-setup".serviceConfig = {
-    User = lib.mkForce "nixserver-service";
-    Group = lib.mkForce "nextcloud";
+  systemd.services."nextcloud-setup" = {
+    after = "postgresql.service";
+    requires = "postgresql.service";
+    serviceConfig = {
+      User = lib.mkForce "nixserver-service";
+      Group = lib.mkForce "nextcloud";
+    };
   };
 
   # systemd.services."nextcloud-cron".serviceConfig.User = lib.mkForce "nixserver-service";
@@ -484,6 +488,19 @@
   # this is a workaround for the nextcloud-occ script which calls 'sudo -u nextcloud'
   users.groups."wheel".members = [ "nixserver-service" ];
   security.sudo.wheelNeedsPassword = false;
-  
+
+  services.postgresql = mkIf pgsqlLocal {
+    enable = true;
+    ensureDatabases = [ "nextcloud" ];
+    authentication = pkgs.lib.mkOverride 10 ''
+      #type database  DBuser  auth-method
+      local all       all     trust
+    '';
+    # ensureUsers = [{
+    #   name = cfg.config.dbuser;
+    #   ensureDBOwnership = true;
+    # }];
+  };
+
   services.tailscale.enable = true;
 }
