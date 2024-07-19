@@ -425,6 +425,7 @@
       mkdir -p /var/lib/nextcloud/config /var/lib/nextcloud/data /var/lib/nextcloud/store-apps
       chown -R nixserver-service:nextcloud /var/lib/nextcloud
       chmod -R g+w /var/lib/nextcloud
+      chmod 770 /var/lib/nextcloud/data
     '';
   };
 
@@ -439,6 +440,7 @@
     script = ''
       chown -R nixserver-service:nextcloud /var/lib/nextcloud
       chmod -R g+w /var/lib/nextcloud
+      chmod 770 /var/lib/nextcloud/data
     '';
   };
 
