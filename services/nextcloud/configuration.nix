@@ -450,6 +450,8 @@
       chmod g+w /nextcloud-files/config/config.php
       chmod -R g+w /nextcloud-files/data/appdata*
       chmod 770 /nextcloud-files/{data,config}
+      chown nixserver-service:nextcloud /nextcloud-files/data/*
+      chown -R nixserver-service:nextcloud /nextcloud-files/data/appdata*
     '';
   };
 
