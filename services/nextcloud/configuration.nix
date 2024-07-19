@@ -427,9 +427,9 @@
     };
     script = ''
       mkdir -p /nextcloud-files/data
-      chown nixserver-service:nextcloud /nextcloud-files /var/lib/nextcloud
-      # chmod -R g+w /var/lib/nextcloud /nextcloud-files
-      chmod g+w /var/lib/nextcloud /nextcloud-files
+      chown nixserver-service:nextcloud /nextcloud-files /nextcloud-files/*
+      # chmod -R g+w /nextcloud-files /nextcloud-files/*
+      chmod g+w /nextcloud-files /nextcloud-files/*
       chmod 770 /nextcloud-files/data
     '';
   };
@@ -443,9 +443,9 @@
       User = "root";
     };
     script = ''
-      chown nixserver-service:nextcloud /nextcloud-files /var/lib/nextcloud
+      chown nixserver-service:nextcloud /nextcloud-files /nextcloud-files/*
       # chmod -R g+w /var/lib/nextcloud /nextcloud-files
-      chmod g+w /var/lib/nextcloud /nextcloud-files
+      chmod g+w /nextcloud-files /nextcloud-files/*
       chmod 770 /nextcloud-files/data
     '';
   };
