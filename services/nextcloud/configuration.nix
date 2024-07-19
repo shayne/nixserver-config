@@ -446,11 +446,11 @@
     Group = lib.mkForce "nextcloud";
   };
 
-  systemd.services."nextcloud-cron".serviceConfig.User = lib.mkForce "nixserver-service";
-  # # systemd.services."nextcloud-cron".serviceConfig = {
-  # #   User = lib.mkForce "nixserver-service";
-  # #   # Group = lib.mkForce "nixserver-service";
-  # # };
+  # systemd.services."nextcloud-cron".serviceConfig.User = lib.mkForce "nixserver-service";
+  systemd.services."nextcloud-cron".serviceConfig = {
+    User = lib.mkForce "nixserver-service";
+    Group = lib.mkForce "nextcloud";
+  };
   
   # # systemd.services."nextcloud-update-plugins".serviceConfig = {
   # #   User = lib.mkForce "nixserver-service";
