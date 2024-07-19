@@ -100,6 +100,7 @@
   
   # Database type.
   # services.nextcloud.config.dbtype = "sqlite";
+  services.nextcloud.config.dbtype = "pgsql";
   
   # Database user.
   # services.nextcloud.config.dbuser = "nextcloud";
