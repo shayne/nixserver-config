@@ -151,7 +151,7 @@
   #
   # This folder will be populated with a config.php file and a data folder which contains the state of the instance (excluding the database).";
   # services.nextcloud.datadir = config.services.nextcloud.home;
-  services.nextcloud.datadir = "/data";
+  services.nextcloud.datadir = "/nextcloud-files";
   
   # Whether to enable the ImageMagick module for PHP.
   #
@@ -426,11 +426,11 @@
       User = "root";
     };
     script = ''
-      mkdir -p /data/data
-      chown nixserver-service:nextcloud /data /var/lib/nextcloud
-      # chmod -R g+w /var/lib/nextcloud /data
-      chmod g+w /var/lib/nextcloud /data
-      chmod 770 /data/data
+      mkdir -p /nextcloud-files/data
+      chown nixserver-service:nextcloud /nextcloud-files /var/lib/nextcloud
+      # chmod -R g+w /var/lib/nextcloud /nextcloud-files
+      chmod g+w /var/lib/nextcloud /nextcloud-files
+      chmod 770 /nextcloud-files/data
     '';
   };
 
@@ -443,10 +443,10 @@
       User = "root";
     };
     script = ''
-      chown nixserver-service:nextcloud /data /var/lib/nextcloud
-      # chmod -R g+w /var/lib/nextcloud /data
-      chmod g+w /var/lib/nextcloud /data
-      chmod 770 /data/data
+      chown nixserver-service:nextcloud /nextcloud-files /var/lib/nextcloud
+      # chmod -R g+w /var/lib/nextcloud /nextcloud-files
+      chmod g+w /var/lib/nextcloud /nextcloud-files
+      chmod 770 /nextcloud-files/data
     '';
   };
 

@@ -3,7 +3,7 @@ appdata:
   - /var/lib/nextcloud
   - /var/lib/tailscale
 mounts:
-  - /mnt/rust/nextcloud:/data
+  - /mnt/rust/nextcloud:/nextcloud-files
 devices:
   - /dev/net/tun:/dev/net/tun
 cap_add:
