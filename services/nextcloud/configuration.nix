@@ -435,8 +435,8 @@
       User = "root";
     };
     script = ''
-      chmod -R nixserver-service:nextcloud /var/lib/nextcloud
-      chmod -R g+w /var/lib/nextcloud
+      chown -R nixserver-service:nextcloud /var/lib/nextcloud/*
+      chmod -R g+w /var/lib/nextcloud/*
     '';
   };
 
