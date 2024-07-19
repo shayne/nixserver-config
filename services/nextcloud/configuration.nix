@@ -427,10 +427,10 @@
     };
     script = ''
       mkdir -p /nextcloud-files/{data,config,store-apps}
-      chown nixserver-service:nextcloud /nextcloud-files /nextcloud-files/{data,config,store-apps} /nextcloud-files/config/*
+      chown nixserver-service:nextcloud /nextcloud-files /nextcloud-files/{data,config,store-apps}
       chmod 775 /nextcloud-files /nextcloud-files/{data,config,store-apps}
       # chmod g+w /nextcloud-files/config/config.php || true
-      chmod -R g+w /nextcloud-files/data/appdata*
+      # chmod -R g+w /nextcloud-files/data/appdata*
       chmod 770 /nextcloud-files/{data,config}
     '';
   };
