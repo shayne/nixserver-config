@@ -473,8 +473,9 @@
   };
 
   users.groups."nextcloud".members = [ "nixserver-service" config.services.nginx.user ];
-  # users.groups."wheel".members = [ "nixserver-service" ];
-  # security.sudo.wheelNeedsPassword = false;
+  # this is a workaround for the nextcloud-occ script which calls 'sudo -u nextcloud'
+  users.groups."wheel".members = [ "nixserver-service" ];
+  security.sudo.wheelNeedsPassword = false;
   
   services.tailscale.enable = true;
 }
