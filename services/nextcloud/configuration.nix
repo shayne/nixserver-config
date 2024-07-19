@@ -92,6 +92,7 @@
   
   # The full path to a file that contains the database password.
   # services.nextcloud.config.dbpassFile = null;
+  services.nextcloud.config.dbpassFile = "${toString (pkgs.writeSecret "nextcloud_admin_password")}";
   
   # Database port.
   # services.nextcloud.config.dbport = null;
@@ -473,9 +474,9 @@
   # services.phpfpm.pools.nextcloud.group = lib.mkForce "nixserver-service";
   services.phpfpm = {
     pools.nextcloud = {
-      # user = lib.mkForce "nixserver-service";
-      # group = lib.mkForce "nextcloud";
-      group = lib.mkForce "nixserver-service";
+      user = lib.mkForce "nixserver-service";
+      group = lib.mkForce "nextcloud";
+      # group = lib.mkForce "nixserver-service";
     };
   };
 
