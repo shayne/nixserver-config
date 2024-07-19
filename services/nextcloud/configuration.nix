@@ -420,9 +420,9 @@
       User = "root";
     };
     script = ''
-      mkdir /var/lib/nextcloud/config /var/lib/nextcloud/data /var/lib/nextcloud/store-apps
-      chmod -R nixserver-service:nextcloud /var/lib/nextcloud
-      chmod -R g+w /var/lib/nextcloud
+      mkdir -p /var/lib/nextcloud/config /var/lib/nextcloud/data /var/lib/nextcloud/store-apps
+      chmod -R nixserver-service:nextcloud /var/lib/nextcloud/*
+      chmod -R g+w /var/lib/nextcloud/*
     '';
   };
 
