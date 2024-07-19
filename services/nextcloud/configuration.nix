@@ -426,7 +426,7 @@
       User = "root";
     };
     script = ''
-      mkdir -p /nextcloud-files/data /var/lib/nextcloud/store-apps
+      mkdir -p /nextcloud-files/data /nextcloud-files/config /var/lib/nextcloud/store-apps
       chown nixserver-service:nextcloud /nextcloud-files /nextcloud-files/* /var/lib/nextcloud/store-apps
       # chmod -R g+w /nextcloud-files /nextcloud-files/*
       chmod g+w /nextcloud-files /nextcloud-files/* /var/lib/nextcloud/store-apps
