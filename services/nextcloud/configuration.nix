@@ -509,15 +509,11 @@
       #type database  DBuser  auth-method
       local all       all     trust
     '';
-    ensureUsers = [{
-      name = "nixserver-service";
-      ensureClauses = {
-        superuser = true;
-        createrole = true;
-        createdb = true;
-      };
-    }];
+    # ensureUsers = [{
+    #   name = "nixserver-service";
+    # }];
     initialScript = pkgs.writeText "backend-initScript" ''
+      CREATE ROLE nixserver-service LOGIN;
       CREATE ROLE nextcloud LOGIN;
       CREATE DATABASE nextcloud;
       GRANT ALL PRIVILEGES ON DATABASE nextcloud TO nextcloud;
