@@ -504,14 +504,18 @@
 
   services.postgresql = {
     enable = true;
-    ensureDatabases = [ "nixserver-service" "nextcloud" ];
+    ensureDatabases = [ "nextcloud" ];
     authentication = pkgs.lib.mkOverride 10 ''
       #type database  DBuser  auth-method
       local all       all     trust
     '';
     ensureUsers = [{
       name = "nixserver-service";
-      ensureDBOwnership = true;
+      ensureClauses = {
+        superuser = true;
+        createrole = true;
+        createdb = true;
+      };
     }];
     initialScript = pkgs.writeText "backend-initScript" ''
       CREATE ROLE nextcloud LOGIN;
