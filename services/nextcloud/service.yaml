@@ -1,6 +1,7 @@
 host: pve0
 appdata:
   - /var/lib/nextcloud
+  - /var/lib/postgresql
   - /var/lib/tailscale
 mounts:
   - /mnt/rust/nextcloud:/nextcloud-files
