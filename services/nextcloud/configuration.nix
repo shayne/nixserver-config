@@ -509,6 +509,7 @@
       #type database  DBuser  auth-method
       local all       all     trust
     '';
+    ensureDatabases = [ "nixserver-service" ];
     ensureUsers = [{
       name = "nixserver-service";
       ensureDBOwnership = true;
