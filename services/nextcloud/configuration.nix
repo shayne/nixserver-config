@@ -482,6 +482,11 @@
   # #   # Group = lib.mkForce "nixserver-service";
   # # };
 
+  systemd.services."postgresql".serviceConfig = {
+    User = lib.mkForce "nixserver-service";
+    Group = lib.mkForce "nixserver-service";
+  };
+
   # services.phpfpm.pools.nextcloud.user = lib.mkForce "nixserver-service";
   # services.phpfpm.pools.nextcloud.group = lib.mkForce "nixserver-service";
   services.phpfpm = {
