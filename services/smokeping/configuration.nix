@@ -150,7 +150,7 @@
     + Internet
     menu = Internet
     title = Internet
-    ++ First hop
+    ++ first-hop
     menu = First hop
     title = First hop
     host = 32.221.232.1
