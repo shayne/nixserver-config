@@ -147,17 +147,13 @@
     menu = Router
     title = UDM Pro SE
     host = 10.2.0.1
-    ++ PVE0
-    menu = pve0
-    title = pve0
-    host = pve0.home.ss.ht
-    ++ Tower
-    menu = Tower
-    title = Tower
-    host = tower.home.ss.ht
     + Internet
     menu = Internet
     title = Internet
+    ++ First hop
+    menu = First hop
+    title = First hop
+    host = 32.221.232.1
     ++ 8-8-8-8
     menu = 8-8-8-8
     title = 8-8-8-8
