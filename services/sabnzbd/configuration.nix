@@ -1,4 +1,9 @@
 { pkgs, ... }: {
+
+  environment.systemPackages = with pkgs; [
+    fio
+  ];
+  
   # SABnzbd
   services.sabnzbd.enable = true;
   services.sabnzbd.package = pkgs.unstable.sabnzbd;
