@@ -5,6 +5,7 @@ appdata:
 mounts:
   - /mnt/rust/media:/media
   - /flash/documents:/documents
+  - /flash/backups:/backups
 devices:
   - /dev/net/tun:/dev/net/tun
 cap_add:
