@@ -3,7 +3,7 @@ appdata:
   - /config
   - /var/lib/tailscale
 mounts:
-  - /flash/downloads-complete:/downloads-complete
+  - /mnt/pve/local-ext4/downloads-complete:/downloads-complete
   - /mnt/pve/local-ext4/downloads-incomplete:/downloads-incomplete
   - /mnt/rust/media/movies:/movies
 devices:
