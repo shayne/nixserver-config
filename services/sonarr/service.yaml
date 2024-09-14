@@ -3,8 +3,8 @@ appdata:
   - /config
   - /var/lib/tailscale
 mounts:
-  - /mnt/pve/local-ext4/downloads-complete:/downloads-complete
-  - /mnt/pve/local-ext4/downloads-incomplete:/downloads-incomplete
+  - /mnt/pve/nvme/downloads-complete:/downloads-complete
+  - /mnt/pve/nvme/downloads-incomplete:/downloads-incomplete
   - /mnt/rust/media/tv:/tv
 devices:
   - /dev/net/tun:/dev/net/tun
