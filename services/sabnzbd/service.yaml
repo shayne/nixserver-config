@@ -3,7 +3,7 @@ appdata:
   - /var/lib/sabnzbd
   - /var/lib/tailscale
 mounts:
-  - /flash/downloads-complete:/downloads-complete
+  - /mnt/pve/local-ext4/downloads-complete:/downloads-complete
   - /mnt/pve/local-ext4/downloads-incomplete:/downloads-incomplete
 devices:
   - /dev/net/tun:/dev/net/tun
