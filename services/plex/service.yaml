@@ -4,7 +4,7 @@ appdata:
   - /var/lib/tailscale
 mounts:
   - /mnt/rust/media:/media
-  - /mnt/gdrive:/gdrive
+  - /mnt/gdrive:/mnt/gdrive
   - /flash/transcode:/transcode
 ports:
   - 32400:32400
