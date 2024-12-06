@@ -8,5 +8,9 @@
     group = "nixserver-service";
   };
 
+  nixpkgs.config.permittedInsecurePackages = [
+    "aspnetcore-runtime-wrapped-6.0.36"
+  ];
+
   services.tailscale.enable = true;
 }
