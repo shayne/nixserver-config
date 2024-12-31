@@ -6,6 +6,7 @@ mounts:
   - /home/shayne/backups/vaultwarden:/backup
 devices:
   - /dev/net/tun:/dev/net/tun
+privileged: true
 cap_add:
   - net_admin
   - sys_module
